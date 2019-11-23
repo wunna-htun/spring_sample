@@ -52,10 +52,10 @@ public class UserController {
 	
 	
 	//findUsernameAndLocation
-	@GetMapping("user/nameAndLocation/{userName}&&{location}")
+	@GetMapping("user/nameAndLocation/{name}&&{location}")
 	public ResponseEntity<List<User>> getUserNameAndLocation(@PathVariable String name  , String location){
 		System.out.println("find user name and location ");
-		return new ResponseEntity<List<User>>(service.getUserNameAndLocation(name, location),HttpStatus.OK); 
+		return new ResponseEntity<List<User>>(service.getUserNameAndLocation("kyaw", "yangon"),HttpStatus.OK); 
 	}
 	
 	
